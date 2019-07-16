@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://autoexport/locale/autoExport.dtd">
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<dialog id="extensions.AutomaticExport.dialog.userdefined"
+        title="&extensions.AutomaticExport.both.dialog.userdefined;"
+        buttons="accept,cancel"
+        onload="AutomaticExport.initUserdefinedTime();"
+        ondialogaccept="AutomaticExport.onAccept_Userdefined();"
+        ondialogcancel="AutomaticExport.onCancel_Userdefined();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script src="autoExport.js"/>
+
+  <groupbox orient="Vertical" width="100%">
+   <caption label="&extensions.AutomaticExport.both.userdefined.label;" />
+    <vbox>
+		<hbox align="center">
+			<textbox id="extensions.AutomaticExport.both.userdefined.hour" size="2" maxlength="2" tabindex="1"/>
+			<label control="extensions.AutomaticExport.both.userdefined.hour.label" value="&extensions.AutomaticExport.both.userdefined.hour.label;"/>
+		</hbox>
+		<hbox>    
+			<textbox id="extensions.AutomaticExport.both.userdefined.minute" size="2" maxlength="2" tabindex="1"/>
+			<label control="extensions.AutomaticExport.both.userdefined.minute.label" value="&extensions.AutomaticExport.both.userdefined.minute.label;"/>
+		</hbox>
+	</vbox>
+  </groupbox>
+
+</dialog>
+

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://autoexport/skin/autoExport.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://autoexport/locale/autoExport.dtd">
+
+<overlay id="autoExport" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+	<script type="application/x-javascript" src="chrome://autoexport/content/autoExport.js"/>
+	
+	<script>
+		window.addEventListener("load", AutomaticExport.init, false);
+		window.addEventListener("unload", AutomaticExport.uninit, false);
+	</script>
+  
+  <toolbarpalette id="CalendarToolbarPalette"> 
+  
+    <toolbarbutton
+      class="toolbarbutton-1"
+      mode="calendar"
+      id="autoExportButton"
+      type="menu-button"
+      label="&exportButton_label;"
+      tooltiptext="&exportButton_tooltip;"
+      oncommand='AutomaticExport.autoExportOnButton("normal");'>
+      
+      <menupopup id="extensions.AutomaticExport.id.normal.button.menu" onpopupshowing='AutomaticExport.initMenupopup("normal");'>
+        <menuitem id="extensions.AutomaticExport.id.normal.button.timer.activate" label="&extensions.AutomaticExport.both.timer.menuitem.activate;" type="checkbox" oncommand='AutomaticExport.onIntervallActivate("normal")'/>
+        <menuseparator /> 
+        <menuitem id="extensions.AutomaticExport.id.normal.button.timer.value1" label="&extensions.AutomaticExport.both.timer.menuitem.value1;" type="radio" name="extensions.AutomaticExport.normal.timer.radio" oncommand='AutomaticExport.setIntervallTime("normal", 15)'/>
+        <menuitem id="extensions.AutomaticExport.id.normal.button.timer.value2" label="&extensions.AutomaticExport.both.timer.menuitem.value2;" type="radio" name="extensions.AutomaticExport.normal.timer.radio" oncommand='AutomaticExport.setIntervallTime("normal", 30)'/>
+        <menuitem id="extensions.AutomaticExport.id.normal.button.timer.value3" label="&extensions.AutomaticExport.both.timer.menuitem.value3;" type="radio" name="extensions.AutomaticExport.normal.timer.radio" oncommand='AutomaticExport.setIntervallTime("normal", 60)'/>
+        <menuitem id="extensions.AutomaticExport.id.normal.button.timer.value4" label="&extensions.AutomaticExport.both.timer.menuitem.value4;" type="radio" name="extensions.AutomaticExport.normal.timer.radio" oncommand='AutomaticExport.setIntervallTime("normal", 120)'/>
+        <menuitem id="extensions.AutomaticExport.id.normal.button.timer.userdefined" label="&extensions.AutomaticExport.both.timer.menuitem.userdefined;" type="radio" name="extensions.AutomaticExport.normal.timer.radio" oncommand='AutomaticExport.setUserdefinedTime("normal")'/>
+      </menupopup>
+    
+    </toolbarbutton>
+      
+    <toolbarbutton
+      class="toolbarbutton-1"
+      id="autoExportBackupButton"
+      mode="calendar"
+      type="menu-button"
+      label="&exportBackupButton_label;"
+      tooltiptext="&exportBackupButton_tooltip;"
+      oncommand='AutomaticExport.autoExportOnButton("backup");'>
+      
+      <menupopup id="extensions.AutomaticExport.id.backup.button.menu" onpopupshowing='AutomaticExport.initMenupopup("backup");'>
+        <menuitem id="extensions.AutomaticExport.id.backup.button.timer.activate" label="&extensions.AutomaticExport.both.timer.menuitem.activate;" type="checkbox" oncommand='AutomaticExport.onIntervallActivate("backup")'/>
+        <menuseparator /> 
+        <menuitem id="extensions.AutomaticExport.id.backup.button.timer.value1" label="&extensions.AutomaticExport.both.timer.menuitem.value1;" type="radio" name="extensions.AutomaticExport.backup.timer.radio" oncommand='AutomaticExport.setIntervallTime("backup", 15)'/>
+        <menuitem id="extensions.AutomaticExport.id.backup.button.timer.value2" label="&extensions.AutomaticExport.both.timer.menuitem.value2;" type="radio" name="extensions.AutomaticExport.backup.timer.radio" oncommand='AutomaticExport.setIntervallTime("backup", 30)'/>
+        <menuitem id="extensions.AutomaticExport.id.backup.button.timer.value3" label="&extensions.AutomaticExport.both.timer.menuitem.value3;" type="radio" name="extensions.AutomaticExport.backup.timer.radio" oncommand='AutomaticExport.setIntervallTime("backup", 60)'/>
+        <menuitem id="extensions.AutomaticExport.id.backup.button.timer.value4" label="&extensions.AutomaticExport.both.timer.menuitem.value4;" type="radio" name="extensions.AutomaticExport.backup.timer.radio" oncommand='AutomaticExport.setIntervallTime("backup", 120)'/>
+        <menuitem id="extensions.AutomaticExport.id.backup.button.timer.userdefined" label="&extensions.AutomaticExport.both.timer.menuitem.userdefined;" type="radio" name="extensions.AutomaticExport.backup.timer.radio" oncommand='AutomaticExport.setUserdefinedTime("backup")'/>
+      </menupopup>
+    
+    </toolbarbutton>  
+      
+  </toolbarpalette>
+  
+  <stringbundleset id="stringbundleset">
+			<stringbundle id="autoExport" src="chrome://autoexport/locale/autoExport.properties"/>
+	</stringbundleset>
+  
+</overlay>

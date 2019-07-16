@@ -1,0 +1,44 @@
+﻿<!ENTITY settings.title "Settings">
+<!ENTITY extensions.AutomaticExport.normal.prefpane.label "Normal mode">
+<!ENTITY extensions.AutomaticExport.backup.prefpane.label "Backup mode">
+
+<!ENTITY extensions.AutomaticExport.normal.description "Description: In this mode there will be saved one instance with filename calendarname.ics">
+<!ENTITY extensions.AutomaticExport.backup.description "Description: In this mode there will be saved more than one instance with filename calendarname_date.ics">
+
+<!ENTITY extensions.AutomaticExport.both.common.groupbox "Common">
+<!ENTITY extensions.AutomaticExport.backup.common.counter.label "Number of backups">
+<!ENTITY extensions.AutomaticExport.both.common.hint "  hint: checked = Yes / unchecked = No (than you can only export with button!)">
+
+<!ENTITY extensions.AutomaticExport.both.exportDirectory.groupbox "Directory for export">
+<!ENTITY extensions.AutomaticExport.both.exportDirectory.note "  e.g.: absolut: 'D:\example\ICS' relative: '..\..\' or '..\directory'">
+
+<!ENTITY extensions.AutomaticExport.both.exportFormat.groupbox "Format of exported calendar">
+<!ENTITY extensions.AutomaticExport.both.exportFormat.cb.ics "iCalendar">
+<!ENTITY extensions.AutomaticExport.both.exportFormat.cb.html "HTML">
+<!ENTITY extensions.AutomaticExport.both.exportFormat.cb.csv "Comma Separated Values (CSV)">
+
+<!ENTITY extensions.AutomaticExport.both.exportCalendars.groupbox "Calendars to export">
+<!ENTITY extensions.AutomaticExport.both.exportCalendars.checkbox.label "All calendars">
+<!ENTITY extensions.AutomaticExport.both.exportCalendars.hint "  hint: It is possible to select more calendars then one by pressing 'add' one more time!">
+
+<!ENTITY extensions.AutomaticExport.both.startApplication.groupbox "Start an application after export">
+<!ENTITY extensions.AutomaticExport.both.startApplication.activate.label "Active">
+<!ENTITY extensions.AutomaticExport.both.startApplication.appPath.label "Path of application">
+<!ENTITY extensions.AutomaticExport.both.startApplication.appParams.label "Parameters of application (separator: ';')">
+
+<!ENTITY extensions.AutomaticExport.both.exportPath.absolute.label "absolut">
+<!ENTITY extensions.AutomaticExport.both.exportPath.relative.label "relative to the profile directory">
+<!ENTITY extensions.AutomaticExport.both.profDir.button.label "show profile directory">
+
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.recurrentExport "Recurrent export">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.activate "Recurrent export active">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value1 "15 minutes">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value2 "30 minutes">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value3 "1 hour">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value4 "2 hours">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.userdefined "User-defined...">
+
+<!ENTITY extensions.AutomaticExport.both.dialog.userdefined "User-defined time">
+<!ENTITY extensions.AutomaticExport.both.userdefined.label "User-defined time">
+<!ENTITY extensions.AutomaticExport.both.userdefined.hour.label "hour(s)">
+<!ENTITY extensions.AutomaticExport.both.userdefined.minute.label "minute(s)">

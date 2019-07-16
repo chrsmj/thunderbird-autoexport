@@ -1,0 +1,17 @@
+﻿<!ENTITY exportButton_label "Esporta automaticamente">
+<!ENTITY exportButton_tooltip "Esporta tutti i calendari definiti">
+
+<!ENTITY exportBackupButton_label "Salva automaticamente">
+<!ENTITY exportBackupButton_tooltip "Effettua un salvataggio di tutti i calendari definiti">
+
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.activate "Salvataggio automatico attivato">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value1 "15 minuti">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value2 "30 minuti">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value3 "1 ora">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value4 "2 ore">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.userdefined "Personalizza...">
+
+<!ENTITY extensions.AutomaticExport.both.dialog.userdefined "Periodo di tempo personalizzato">
+<!ENTITY extensions.AutomaticExport.both.userdefined.label "Periodo di tempo personalizzato">
+<!ENTITY extensions.AutomaticExport.both.userdefined.hour.label "ore">
+<!ENTITY extensions.AutomaticExport.both.userdefined.minute.label "minuti">

@@ -1,0 +1,59 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#autoExportButton {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon24.png");
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+#autoExportButton:hover {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon24.png");
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+toolbar[iconsize="small"] #autoExportButton {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon16.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+
+toolbar[iconsize="small"] #autoExportButton:hover {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon16.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+#autoExportBackupButton {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon24_backup.png");
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+#autoExportBackupButton:hover {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon24_backup.png");
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+toolbar[iconsize="small"] #autoExportBackupButton {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon16_backup.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+
+toolbar[iconsize="small"] #autoExportBackupButton:hover {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon16_backup.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+#autoExportCloseButton {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon24_close.png");
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+#autoExportCloseButton:hover {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon24_close.png");
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+toolbar[iconsize="small"] #autoExportCloseButton {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon16_close.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+
+toolbar[iconsize="small"] #autoExportCloseButton:hover {
+	list-style-image: url("chrome://autoexport/skin/autoExportIcon16_close.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}

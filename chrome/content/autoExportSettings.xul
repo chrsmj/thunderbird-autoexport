@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://autoexport/locale/autoExportSettings.dtd">
+
+
+
+<prefwindow id="autoExportSettings_prefwindow"
+			type="prefwindow"
+			title="&settings.title;"
+			style="min-width: 500px; min-height: 600px;"
+			xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            dlgbuttons="accept,cancel"
+			onload=""
+			ondialogaccept="AutoExportSettings.onAccept();"
+			ondialogcancel="AutoExportSettings.onCancel();">
+			
+	<script type="application/x-javascript" src="chrome://autoexport/content/autoExport.js"/>
+	<script type="application/x-javascript" src="chrome://autoexport/content/autoExportSettings.js"/>
+	
+  <!-- Normal Options -->
+  <prefpane id="extensions.AutomaticExport.id.normal.pane"
+            label="&extensions.AutomaticExport.normal.prefpane.label;"
+            image="chrome://autoexport/skin/autoExportIcon24.png"
+            src="chrome://autoExport/content/prefpane_normal.xul"/>
+
+  <!-- Backup Options -->
+  <prefpane id="extensions.AutomaticExport.id.backup.pane"
+            label="&extensions.AutomaticExport.backup.prefpane.label;"
+            image="chrome://autoexport/skin/autoExportIcon24_backup.png"
+            src="chrome://autoExport/content/prefpane_backup.xul"/>
+  
+</prefwindow>

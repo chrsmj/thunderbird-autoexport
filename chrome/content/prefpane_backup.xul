@@ -1,0 +1,160 @@
+﻿<?xml version="1.0"?>
+
+<!DOCTYPE window SYSTEM "chrome://autoexport/locale/autoExportSettings.dtd">
+
+<overlay id="prefpane_backup_overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         
+  
+  <prefpane id="extensions.AutomaticExport.id.backup.pane"
+            label="&extensions.AutomaticExport.backup.prefpane.label;"
+            image="chrome://autoexport/skin/autoExportIcon24_backup.png"
+            onpaneload='AutoExportSettings.onLoad(); AutoExportSettings.initControls("backup");'>
+            
+    <preferences>
+		<preference id="extensions.AutomaticExport.prefid.backup.directory"                    name="extensions.AutomaticExport.prefid.backup.directory"                    type="unichar"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.exportPath"      			 name="extensions.AutomaticExport.prefid.backup.exportPath"					  type="int"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.exportFormat.ics"             name="extensions.AutomaticExport.prefid.backup.exportFormat.ics"             type="bool"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.exportFormat.html"            name="extensions.AutomaticExport.prefid.backup.exportFormat.html"            type="bool"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.exportFormat.csv"             name="extensions.AutomaticExport.prefid.backup.exportFormat.csv"             type="bool"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.exportCalendars.calendars"    name="extensions.AutomaticExport.prefid.backup.exportCalendars.calendars"    type="string"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.exportCalendars.allCalendars" name="extensions.AutomaticExport.prefid.backup.exportCalendars.allCalendars" type="bool"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.startApplication.activate"    name="extensions.AutomaticExport.prefid.backup.startApplication.activate"    type="bool"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.startApplication.appPath"     name="extensions.AutomaticExport.prefid.backup.startApplication.appPath"     type="unichar"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.startApplication.appParams"   name="extensions.AutomaticExport.prefid.backup.startApplication.appParams"   type="string"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.counter"                      name="extensions.AutomaticExport.prefid.backup.counter"                      type="int"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.button.timer.activate"        name="extensions.AutomaticExport.prefid.backup.button.timer.activate"        type="bool"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.button.timer.hour"        	   name="extensions.AutomaticExport.prefid.backup.button.timer.hour"            type="string"/>
+		<preference id="extensions.AutomaticExport.prefid.backup.button.timer.minute"          name="extensions.AutomaticExport.prefid.backup.button.timer.minute"          type="string"/>
+    </preferences>
+    
+    <stringbundleset id="stringbundleset">
+  		<stringbundle id="extensions.AutomaticExport.id.stringbundle" src="chrome://autoexport/locale/autoExportSettings.properties"/>
+  	</stringbundleset>
+    
+    <description class="indent">&extensions.AutomaticExport.backup.description;</description>
+    
+    <groupbox>
+      <caption label="&extensions.AutomaticExport.both.common.groupbox;"/>
+      <separator class="thin"/>
+      <vbox>
+        <hbox align="center">
+          <label id="extensions.AutomaticExport.id.backup.common.counter.label" value="&extensions.AutomaticExport.backup.common.counter.label;" control="numOfBackups" />
+          <menulist flex="0" id="extensions.AutomaticExport.id.backup.common.counter" preference="extensions.AutomaticExport.prefid.backup.counter">
+            <menupopup>
+              <menuitem value="0" label="1" />
+              <menuitem value="1" label="2" />
+              <menuitem value="2" label="3" />
+              <menuitem value="3" label="4" />
+              <menuitem value="4" label="5" />
+              <menuitem value="5" label="6" />
+              <menuitem value="6" label="7" />
+              <menuitem value="7" label="8" />
+              <menuitem value="8" label="9" />
+            </menupopup>
+          </menulist>
+          <spacer flex="1" />
+        </hbox>
+      </vbox>
+    </groupbox>
+    
+    <groupbox>
+		<caption label="&extensions.AutomaticExport.both.timer.menuitem.recurrentExport;"/>
+		<separator class="thin"/>
+		<vbox>
+			<checkbox id="extensions.AutomaticExport.id.backup.button.timer.activate" label="&extensions.AutomaticExport.both.timer.menuitem.activate;"  preference="extensions.AutomaticExport.prefid.backup.button.timer.activate" />
+			<vbox>
+				<hbox align="center">
+					<textbox id="extensions.AutomaticExport.id.backup.userdefined.hour" style="height: 23px; width: 4em;" preference="extensions.AutomaticExport.prefid.backup.button.timer.hour"/>
+					<label control="extensions.AutomaticExport.both.userdefined.hour.label" value="&extensions.AutomaticExport.both.userdefined.hour.label;"/>
+				</hbox>
+				<hbox align="center">
+					<textbox id="extensions.AutomaticExport.id.backup.userdefined.minute" style="height: 23px; width: 4em;" preference="extensions.AutomaticExport.prefid.backup.button.timer.minute"/>
+					<label control="extensions.AutomaticExport.both.userdefined.minute.label" value="&extensions.AutomaticExport.both.userdefined.minute.label;"/>
+				</hbox>
+			</vbox>
+		</vbox>
+    </groupbox>
+	
+	<groupbox>
+      <caption label="&extensions.AutomaticExport.both.exportDirectory.groupbox;"/>
+      <separator class="thin"/>
+      <vbox>
+		<radiogroup id="extensions.AutomaticExport.id.backup.exportPath" preference="extensions.AutomaticExport.prefid.backup.exportPath">
+			<hbox align="left">
+				<radio id="extensions.AutomaticExport.id.backup.exportPath.absolute" label="&extensions.AutomaticExport.both.exportPath.absolute.label;" oncommand='AutoExportSettings.toggleExportPath("backup");'/>
+				<radio id="extensions.AutomaticExport.id.backup.exportPath.relative" label="&extensions.AutomaticExport.both.exportPath.relative.label;" oncommand='AutoExportSettings.toggleExportPath("backup");'/>
+				<button
+                  style="height: 23px;"
+				  label="&extensions.AutomaticExport.both.profDir.button.label;"
+                  id="extensions.AutomaticExport.id.backup.showPath.button"
+                  oncommand='AutoExportSettings.showProfDir();'/>
+			</hbox>
+		</radiogroup>
+        <hbox align="center">
+          <textbox id="extensions.AutomaticExport.id.backup.directory" style="height: 23px; width: 25em;" preference="extensions.AutomaticExport.prefid.backup.directory"/>
+          <button class="browse"
+                  style="height: 23px; max-width: 25px;"
+                  image="chrome://autoexport/skin/browse.png"
+                  id="extensions.AutomaticExport.id.backup.exportDirectory.button"
+                  oncommand='AutoExportSettings.getDirForExport("backup");'/>
+        </hbox> 
+        <description class="indent">&extensions.AutomaticExport.both.exportDirectory.note;</description>
+      </vbox>
+    </groupbox>
+    
+    <groupbox>
+      <caption label="&extensions.AutomaticExport.both.exportFormat.groupbox;"/>
+      <separator class="thin"/>
+      <vbox>
+        <hbox align="center">
+          <checkbox id="extensions.AutomaticExport.id.backup.exportFormat.ics"  label="&extensions.AutomaticExport.both.exportFormat.cb.ics;"  preference="extensions.AutomaticExport.prefid.backup.exportFormat.ics" />
+          <checkbox id="extensions.AutomaticExport.id.backup.exportFormat.html" label="&extensions.AutomaticExport.both.exportFormat.cb.html;" preference="extensions.AutomaticExport.prefid.backup.exportFormat.html" />
+          <checkbox id="extensions.AutomaticExport.id.backup.exportFormat.csv"  label="&extensions.AutomaticExport.both.exportFormat.cb.csv;"  preference="extensions.AutomaticExport.prefid.backup.exportFormat.csv" />		
+        </hbox>
+      </vbox>
+    </groupbox>
+    
+    <groupbox>
+      <caption label="&extensions.AutomaticExport.both.exportCalendars.groupbox;"/>
+      <separator class="thin"/>
+      <vbox>
+        <checkbox id="extensions.AutomaticExport.id.backup.exportCalendars.allCalendars" label="&extensions.AutomaticExport.both.exportCalendars.checkbox.label;" preference="extensions.AutomaticExport.prefid.backup.exportCalendars.allCalendars" oncommand='AutoExportSettings.toggleAllCalendar("backup");'/>
+        <hbox>
+          <textbox id="extensions.AutomaticExport.id.backup.exportCalendars.calendars" style="height: 23px; width: 25em;" preference="extensions.AutomaticExport.prefid.backup.exportCalendars.calendars"/>
+          <button	class="browse"
+                  style="height: 23px; max-width: 25px;"
+                  image="chrome://autoexport/skin/add.gif"
+                  id="extensions.AutomaticExport.id.backup.exportCalendars.getButton"
+                  oncommand='return AutoExportSettings.getCalendarToExport("backup");'/>
+          <button class="browse"
+                  style="width:20px"
+                  image="chrome://autoexport/skin/remove.gif"
+                  id="extensions.AutomaticExport.id.backup.exportCalendars.removeButton"
+                  oncommand='return AutoExportSettings.removeCalendarToExport("backup");'/>
+        </hbox>
+        <description class="indent">&extensions.AutomaticExport.both.exportCalendars.hint;</description>
+      </vbox>
+    </groupbox>
+    
+    <groupbox>
+      <caption label="&extensions.AutomaticExport.both.startApplication.groupbox;"/>
+      <separator class="thin"/>
+      <vbox>
+        <checkbox id="extensions.AutomaticExport.id.backup.startApplication.activate" label="&extensions.AutomaticExport.both.startApplication.activate.label;" preference="extensions.AutomaticExport.prefid.backup.startApplication.activate" oncommand='AutoExportSettings.toggleStartApp("backup")'/>
+        <hbox align="center">
+          <label id="extensions.AutomaticExport.id.backup.startApplication.appPath.label" value="&extensions.AutomaticExport.both.startApplication.appPath.label;"/>
+          <spacer flex="1"/>
+          <textbox id="extensions.AutomaticExport.id.backup.startApplication.appPath" style="height: 23px; width: 25em;" preference="extensions.AutomaticExport.prefid.backup.startApplication.appPath"/>
+        </hbox>
+        <hbox align="center">
+          <label id="extensions.AutomaticExport.id.backup.startApplication.appParams.label" value="&extensions.AutomaticExport.both.startApplication.appParams.label;"/>
+          <spacer flex="1"/>
+          <textbox id="extensions.AutomaticExport.id.backup.startApplication.appParams" style="height: 23px; width: 25em;" preference="extensions.AutomaticExport.prefid.backup.startApplication.appParams"/>
+        </hbox>
+      </vbox>
+    </groupbox>
+    
+  </prefpane>
+
+</overlay>

@@ -1,0 +1,14 @@
+content autoexport jar:chrome/autoExport.jar!/content/
+skin	autoexport	classic/1.0	jar:chrome/autoExport.jar!/skin/classic/
+
+locale autoexport de-DE jar:chrome/autoExport.jar!/locale/de-DE/
+locale autoexport en-US jar:chrome/autoExport.jar!/locale/en-US/
+locale autoexport fr-FR jar:chrome/autoExport.jar!/locale/fr-FR/
+locale autoexport it-IT jar:chrome/autoExport.jar!/locale/it-IT/
+locale autoexport ru-RU jar:chrome/autoExport.jar!/locale/ru-RU/
+locale autoexport zh-TW jar:chrome/autoExport.jar!/locale/zh-TW/
+
+overlay chrome://messenger/content/messenger.xul chrome://autoexport/content/autoExport_lightning.xul
+overlay chrome://sunbird/content/calendar.xul chrome://autoexport/content/autoExport.xul
+
+style chrome://global/content/customizeToolbar.xul chrome://autoexport/skin/autoExport.css

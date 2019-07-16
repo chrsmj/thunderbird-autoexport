@@ -1,0 +1,17 @@
+﻿<!ENTITY exportButton_label "自動匯出">
+<!ENTITY exportButton_tooltip "匯出所有設定的行事曆">
+
+<!ENTITY exportBackupButton_label "自動備份">
+<!ENTITY exportBackupButton_tooltip "備份所有設定的行事曆">
+
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.activate "匯出動作周期">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value1 "15 分鐘">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value2 "30 分鐘">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value3 "1 小時">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value4 "2 小時">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.userdefined "使用者定義…">
+
+<!ENTITY extensions.AutomaticExport.both.dialog.userdefined "使用者定義時間">
+<!ENTITY extensions.AutomaticExport.both.userdefined.label "使用者定義時間">
+<!ENTITY extensions.AutomaticExport.both.userdefined.hour.label "小時">
+<!ENTITY extensions.AutomaticExport.both.userdefined.minute.label "分鐘">

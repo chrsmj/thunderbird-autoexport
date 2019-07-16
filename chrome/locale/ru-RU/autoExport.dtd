@@ -1,0 +1,17 @@
+﻿<!ENTITY exportButton_label "Авто Экспорт">
+<!ENTITY exportButton_tooltip "Экспортировать все календари">
+
+<!ENTITY exportBackupButton_label "Авто резервирование">
+<!ENTITY exportBackupButton_tooltip "Создать резервные копии всех календарей">
+
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.activate "Recurrent export active">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value1 "15 минут">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value2 "30 минут">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value3 "1 час">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value4 "2 часа">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.userdefined "Выберите свое...">
+
+<!ENTITY extensions.AutomaticExport.both.dialog.userdefined "Выбранное время">
+<!ENTITY extensions.AutomaticExport.both.userdefined.label "Выбранное время">
+<!ENTITY extensions.AutomaticExport.both.userdefined.hour.label "час(ов)">
+<!ENTITY extensions.AutomaticExport.both.userdefined.minute.label "минут(ы)">

@@ -1,0 +1,44 @@
+﻿<!ENTITY settings.title "設定">
+<!ENTITY extensions.AutomaticExport.normal.prefpane.label "一般模式">
+<!ENTITY extensions.AutomaticExport.backup.prefpane.label "備份模式">
+
+<!ENTITY extensions.AutomaticExport.normal.description "說明：此模式會儲存一個檔名為「行事曆名稱.ics」的檔案">
+<!ENTITY extensions.AutomaticExport.backup.description "說明：此模式會儲存數個檔名為「行事曆名稱_日期.ics」的檔案">
+
+<!ENTITY extensions.AutomaticExport.both.common.groupbox "一般">
+<!ENTITY extensions.AutomaticExport.backup.common.counter.label "備份數量">
+<!ENTITY extensions.AutomaticExport.both.common.hint "  提示：勾選 = 是 / 取消 = 否（此時只能以按鈕進行匯出！）">
+
+<!ENTITY extensions.AutomaticExport.both.exportDirectory.groupbox "匯出的目錄">
+<!ENTITY extensions.AutomaticExport.both.exportDirectory.note "  例：絕對路徑：'D:\example\ICS' 相對路徑：'..\..\' 或 '..\directory'">
+
+<!ENTITY extensions.AutomaticExport.both.exportFormat.groupbox "匯出行事曆的格式">
+<!ENTITY extensions.AutomaticExport.both.exportFormat.cb.ics "iCalendar（.ics）">
+<!ENTITY extensions.AutomaticExport.both.exportFormat.cb.html "網頁檔（HTML）">
+<!ENTITY extensions.AutomaticExport.both.exportFormat.cb.csv "逗號分隔檔案（CSV）">
+
+<!ENTITY extensions.AutomaticExport.both.exportCalendars.groupbox "要匯出的行事曆">
+<!ENTITY extensions.AutomaticExport.both.exportCalendars.checkbox.label "所有行事曆">
+<!ENTITY extensions.AutomaticExport.both.exportCalendars.hint "  提示：多新增幾次可以加入更多的行事曆！">
+
+<!ENTITY extensions.AutomaticExport.both.startApplication.groupbox "匯出後執行應用程式">
+<!ENTITY extensions.AutomaticExport.both.startApplication.activate.label "啟用">
+<!ENTITY extensions.AutomaticExport.both.startApplication.appPath.label "程式路徑">
+<!ENTITY extensions.AutomaticExport.both.startApplication.appParams.label "程式參數（以 ; 分隔）">
+
+<!ENTITY extensions.AutomaticExport.both.exportPath.absolute.label "絕對路徑">
+<!ENTITY extensions.AutomaticExport.both.exportPath.relative.label "相對於設定檔目錄">
+<!ENTITY extensions.AutomaticExport.both.profDir.button.label "顯示設定檔目錄">
+
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.recurrentExport "Recurrent export">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.activate "匯出動作周期">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value1 "15 分鐘">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value2 "30 分鐘">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value3 "1 小時">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.value4 "2 小時">
+<!ENTITY extensions.AutomaticExport.both.timer.menuitem.userdefined "使用者定義…">
+
+<!ENTITY extensions.AutomaticExport.both.dialog.userdefined "使用者定義時間">
+<!ENTITY extensions.AutomaticExport.both.userdefined.label "使用者定義時間">
+<!ENTITY extensions.AutomaticExport.both.userdefined.hour.label "小時">
+<!ENTITY extensions.AutomaticExport.both.userdefined.minute.label "分鐘">
