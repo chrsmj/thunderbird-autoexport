@@ -29,12 +29,13 @@
 			catch(e)
 			{
 				alert(localize.getString( mode + '_error'));
+				console.error(e);
 			}
 			return true;
 		},
 		
 		getPath : function(path, mode){
-			var pathForExport = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+			var pathForExport = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsIFile);
 			if(AutomaticExport.autoExportPrefs.getIntPref(mode + ".exportPath") == 1)
 			{
 				var file = Components.classes["@mozilla.org/file/directory_service;1"].
@@ -76,10 +77,10 @@
 			if (!calendarEventArray.length) return;
 		  
 			// get the directory for Export
-			var dirForExport = AutomaticExport.autoExportPrefs.getComplexValue(mode + ".directory", Components.interfaces.nsISupportsString);
+			var dirForExport = AutomaticExport.autoExportPrefs.getStringPref(mode + ".directory");
 			  
 			// create the path with directory and file
-			var pathForExport = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+			var pathForExport = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsIFile);
 			pathForExport = AutomaticExport.getPath(dirForExport, mode);
 			
 			if(mode == "normal")
@@ -145,7 +146,7 @@
 						AutomaticExport.autoExportSaveEventsToFile(itemArray, calendarToExport.name, mode, "csv");
 				},
 				onGetResult: function(calendarToExport, aStatus, aItemType, aDetail, aCount, aItems){
-					for each (item in aItems)
+					for (var item of aItems)
 						itemArray.push(item);   
 				}
 			};
@@ -160,14 +161,14 @@
 				alert(localize.getString('err_nodir'));
 				return false;
 			}
-			var calendars = getCalendarManager().getCalendars({});
+			var calendars = cal.getCalendarManager().getCalendars({});
 		
 			// get calendar by his name (string)
 			function getCalendarByName(calendarName) 
 			{
-				for each (var cal in calendars) {
-					if (cal.name == calendarName)
-						return cal; 
+				for (var ncal of calendars) {
+					if (ncal.name == calendarName)
+						return ncal; 
 				}
 				return null;
 			}
@@ -175,8 +176,8 @@
 			// export all calendars if the checkbox in the preferences is checked""
 			if(AutomaticExport.autoExportPrefs.getBoolPref(mode + ".exportCalendars.allCalendars") == true)
 			{
-				for each (var cal in calendars)
-					AutomaticExport.autoExportEntireCalendar(cal, mode);
+				for (var ncal of calendars)
+					AutomaticExport.autoExportEntireCalendar(ncal, mode);
 			}
 			// else export all calendars which are stored in the textbox 
 			else{
@@ -232,7 +233,7 @@
 		deleteOldBackups : function(dir, calName, numOfBackups) {
 			dump("---Aufruf: Delete old Backups\n");
 			// Enumerate files in the backupdir for expiry of old backups
-			var backupDir = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+			var backupDir = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsIFile);
 			backupDir.initWithPath(dir);
 			var dirEnum = backupDir.directoryEntries;
 
@@ -250,7 +251,7 @@
 
 		startApp : function(mode){
 			dump("---Aufruf: startApp\n");
-			var path      = AutomaticExport.autoExportPrefs.getComplexValue(mode + ".startApplication.appPath", Components.interfaces.nsISupportsString);
+			var path      = AutomaticExport.autoExportPrefs.getStringPref(mode + ".startApplication.appPath");
 			var argumentstr = AutomaticExport.autoExportPrefs.getCharPref(mode + ".startApplication.appParams");
 			var arguments = argumentstr.split(";");
 			
@@ -259,7 +260,7 @@
 			if (path == "") return false;
 			
 			var startAppFile    = Components.classes['@mozilla.org/file/local;1']
-					.createInstance(Components.interfaces.nsILocalFile);
+					.createInstance(Components.interfaces.nsIFile);
 			var process = Components.classes['@mozilla.org/process/util;1']
 					.getService(Components.interfaces.nsIProcess);
 					

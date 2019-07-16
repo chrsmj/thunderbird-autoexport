@@ -18,11 +18,14 @@
 			<text value="&creator_label;" style="font-weight: bold;"/>
 			<label>Steffen Röttig</label>
 			<separator class="thin"/>
+			<text value="Current Maintainer" style="font-weight: bold;"/>
+			<label>chrsmj</label>
+			<separator class="thin"/>
 			<text value="E-Mail:" style="font-weight: bold;"/>
-			<label>steff@sunbird-kalender.de</label>
+			<label>thunderbird.autoexport@PenGuinPBX.com</label>
 			<separator class="thin"/>
 			<text value="Homepage:" style="font-weight: bold;"/>
-			<label>http://www.sunbird-kalender.de/extension/autoexport</label>
+			<label>https://github.com/chrsmj/thunderbird-autoexport</label>
 		</vbox>
 		<spacer flex="1"/>
 		<vbox>
